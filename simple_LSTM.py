@@ -142,7 +142,7 @@ class LSTM:
         
         mask = y_test != 0  # Avoid division by zero
 
-        return np.mean(np.abs((y_test[mask] - predictions[mask]) / y_test[mask])) * 100
+        return np.mean(np.abs((y_test[mask] - predictions[mask]) / y_test[mask]))/len(y_test) * 100
     
 df = pd.read_csv("Tesla_stock_price.csv", header='infer')
 n = 10
