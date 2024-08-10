@@ -144,7 +144,7 @@ class LSTM:
 
         return np.mean(np.abs((y_test[mask] - predictions[mask]) / y_test[mask]))/len(y_test) * 100
     
-df = pd.read_csv("/Users/krisha/Jupnotebook/venv/Tesla_stock_price.csv", header='infer')
+df = pd.read_csv("Tesla_stock_price.csv", header='infer')
 n = 10
 df["future"] = df["Close"].shift(-n)
 
